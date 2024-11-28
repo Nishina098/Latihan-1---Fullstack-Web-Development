@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #0c0c0c;
+        color: #fff;
+      }
+      .navbar {
+        background-color: #333;
+      }
+      .nav-link:hover {
+        color: white !important;
+      }
+      .btn:focus {
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <strong>
+        <a
+          class="navbar-brand"
+          style="margin-left: 24px"
+          href="{% url 'home' %}"
+          >Web Profile</a
+        >
+      </strong>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse"
+        style="margin: 20px; padding-left: 500px"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav" style="gap: 10px">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="color: orange; font-size: 20px"
+              href="{% url 'home' %}"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="color: orange; font-size: 20px"
+              href="{% url 'about' %}"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="color: orange; font-size: 20px"
+              href="{% url 'contact' %}"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="ml-auto">
+          <button
+            class="btn btn-outline-warning"
+            style="margin-left: 10px"
+            onclick="window.location.href='{% url 'my_project' %}'"
+          >
+            My Projects
+          </button>
+          <button
+            class="btn btn-outline-warning"
+            style="margin-left: 10px"
+            onclick="window.location.href='{% url 'guest_book' %}'"
+          >
+            Guest Book
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">{% block content %} {% endblock %}</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <img
+        src="{% static 'images/about-img.jpg' %}"
+        alt="Profile Picture"
+        class="card-img-top"
+      />
+    </div>
+  </div>
+  <div class="col-md-8">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm a passionate developer with a strong background in IT and
+      technology. I enjoy creating innovative solutions and building
+      applications that make a difference.
+    </p>
+    <p>
+      My expertise includes full-stack development, network management, and
+      more. When I'm not coding, I love exploring new technologies and
+      contributing to open-source projects.
+    </p>
+    <p>
+      I am a developer with a focus on full-stack development. I have experience
+      in building scalable and efficient applications. I strive to create
+      meaningful digital solutions while continuing to grow and learn in the
+      ever-evolving world of technology.
+    </p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="text-center">
+  <div class="card mx-auto mb-4" style="max-width: 13rem; max-height: 23rem">
+    <img
+      src="{% static 'images/home-img.jpg' %}"
+      style="width: auto; height: auto"
+      class="card-img-top"
+      alt="Profile Picture"
+    />
+  </div>
+  <h1 class="display-4 mb-4">Welcome to My Web Profile</h1>
+  <h5 class="card-title">Hello, I'm Muhammad AL Farabi</h5>
+  <p class="lead">
+    I'm passionate about technology and always eager to learn new things.
+    Explore my work below!
+  </p>
+  <p class="lead">
+    Explore my projects, learn more about me, and feel free to get in touch!
+  </p>
+  <a href="{% url 'my_project' %}" class="btn btn-outline-light btn-lg mt-4"
+    >View My Projects</a
+  >
+</div>
+{% endblock %}
